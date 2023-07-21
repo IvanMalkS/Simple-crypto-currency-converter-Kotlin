@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application' // Android application plugin
+    id 'org.jetbrains.kotlin.android' // Kotlin Android plugin
+}
+
+android {
+    namespace 'com.example.simple_crypto_currency_converter' // Package namespace for the app
+    compileSdk 34 // Specifies the SDK version to compile against
+
+    // Build features
+    buildFeatures{
+        dataBinding true
+        viewBinding true // Enable ViewBinding feature
+    }
+
+    defaultConfig {
+        applicationId "com.example.simple_crypto_currency_converter" // Application ID
+        minSdk 24 // Minimum Android SDK version required by the app
+        targetSdk 34 // Target Android SDK version
+
+        versionCode 1 // Version code for the app version
+        versionName "1.0" // Version name for the app version
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner" // Test instrumentation runner for testing
+    }
+
+    // Configuration for different build types (e.g., release, debug)
+    buildTypes {
+        release {
+            minifyEnabled false // Whether to enable code minification (proguard)
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // Proguard configuration files
+        }
+    }
+
+    // Compilation options for Java and Kotlin
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Kotlin options
+    kotlinOptions {
+        jvmTarget = '1.8' // JVM target version for Kotlin code
+    }
+
+    // Build features
+    buildFeatures{
+        viewBinding true // Enable ViewBinding feature
+    }
+}
+
+// Dependencies for the app
+dependencies {
+    // Glide library for image loading
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Retrofit for network calls
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    // OkHttp logging interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+
+    // AndroidX libraries
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Test dependencies
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

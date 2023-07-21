@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@color/grayBlack">
+
+    <!-- ImageView to display the cryptocurrency icon -->
+    <ImageView
+        android:id="@+id/CryptoIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/crypto_standart"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/cryptoicon" />
+
+    <!-- First LinearLayout to hold the first set of TextViews -->
+    <LinearLayout
+        android:id="@+id/lnLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- TextView to display the field (e.g., "Name") -->
+        <TextView
+            android:id="@+id/field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cr_name"
+            android:textColor="@color/white" />
+
+        <!-- TextView to display the second field (e.g., "Buy") -->
+        <TextView
+            android:id="@+id/field2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cr_buy"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <!-- Divider View -->
+    <View
+        android:id="@+id/viewItem"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/darkGreen"
+        android:layout_marginStart="8dp" />
+
+    <!-- Second LinearLayout to hold the second set of TextViews -->
+    <LinearLayout
+        android:id="@+id/lnLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <!-- TextView to display the cryptocurrency name -->
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Cryptoname"
+            android:textColor="@color/white" />
+
+        <!-- TextView to display the buying price -->
+        <TextView
+            android:id="@+id/itemBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Buy"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

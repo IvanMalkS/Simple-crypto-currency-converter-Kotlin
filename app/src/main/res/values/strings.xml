@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Simple-crypto-currency-converter</string>
+    <string name="get">Get</string>
+    <string name="cr_name">Name:</string>
+    <string name="cr_buy">Buy:</string>
+    <string name="Cryptoname">BTC</string>
+    <string name="Buy">0</string>
+    <string name="fetchdata">FetchData</string>
+    <string name="fetch_data">Fetch data</string>
+    <string name="cryptoicon">CryptoICon</string>
+</resources>
